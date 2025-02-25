@@ -156,6 +156,16 @@ p {
             }
         }
 
+        function playMusic() {
+    let audio = document.getElementById('bgMusic');
+    if (audio.paused) {
+        audio.play().catch(error => console.log("Gagal memutar musik:", error));
+    } else {
+        audio.pause();
+    }
+}
+
+
         function toggleTextarea() {
         let textarea = document.getElementById('curhat');
         if (textarea.style.display === "none") {
